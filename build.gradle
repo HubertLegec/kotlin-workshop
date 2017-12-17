@@ -23,8 +23,8 @@ subprojects { p ->
 subprojects {
     ext {
         kotlinVersion = '1.2.0'
-        html_version = "0.6.6"
-        squash_version = "0.2.2"
+        htmlVersion = "0.6.6"
+        squashVersion = "0.2.2"
     }
 
     repositories {

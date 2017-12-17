@@ -34,6 +34,12 @@ repositories {
 	mavenCentral()
 }
 
+sourceSets {
+    main {
+        resources.srcDirs += "resources"
+        kotlin.srcDirs += "src"
+    }
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')

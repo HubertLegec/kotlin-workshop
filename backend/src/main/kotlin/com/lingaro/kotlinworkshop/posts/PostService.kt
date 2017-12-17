@@ -12,9 +12,9 @@ class PostService(
     fun getAllPosts() = postRepository.findAll()
             .map { PostDTO(it) }
 
-    fun savePost(text: String) {
+    fun savePost(text: String): Long? {
         val post = Post(text, LocalDateTime.now(), userService.getCurrentUser())
-        postRepository.save(post)
+        return postRepository.save(post).id
     }
 
     fun deletePost(id: Long) = postRepository.delete(id)
